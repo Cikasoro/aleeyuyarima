@@ -84,9 +84,9 @@ footer {
 
 
 .profile-description {
-    /* controls how wide it can go */
+    /*max-width: 600px; /* controls how wide it can go */
     margin-top: 20px;   /* centers it horizontally */
-    /* keeps it nicely aligned */
+    /*text-align: center; /* keeps it nicely aligned */
     color: #333;
 }
 
