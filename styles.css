@@ -1,0 +1,199 @@
+html, body {
+    height: 100%;          /* allow full height */
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-blur: 10px; /* Adjust blur intensity */
+    color: #fff; /* Ensures text is readable */
+}
+
+
+
+main {
+    flex: 1;               /* take up available space so footer is pushed down */
+}
+
+footer {
+    background-color: #f8f9fa; /* adjust color as needed */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.site-footer p {
+  font-size: 0.8rem;  /* smaller than default */
+  margin: 0;          /* optional: remove extra space */
+  color: #666;        /* optional: soften text color */
+}
+
+
+
+
+/* Navbar Styling */
+.navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.custom-navbar {
+    background-color: ; /* Pure white */
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd; /* Subtle line instead of shadow */
+}
+
+.custom-navbar .nav-link {
+    color: #333;
+    transition: color 0.3s;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #007bff;
+}
+
+@media (max-width: 767.98px) {
+  .navbar .nav-link {
+    font-size: 0.85rem;   /* smaller text */
+    padding: 0.3rem 0.5rem; /* optional: tighter spacing */
+  }
+}
+
+
+
+/* Hero Section */
+.hero {
+    padding-top: 30px;  /* reduce from default Bootstrap spacing */
+    padding-bottom: 40px;
+}
+
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    background: url('profile.png') center/cover no-repeat;
+    margin-bottom: 40px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 4px solid #f8f9fa;  /* blue border, change color as you like */
+    box-sizing: border-box;      /* ensures border stays inside size */
+}
+
+
+
+.profile-description {
+    max-width: 600px; /* controls how wide it can go */
+    margin-top: 20px;   /* centers it horizontally */
+    text-align: center; /* keeps it nicely aligned */
+    color: #333;
+}
+
+
+
+.cursor {
+    display: inline-block;
+    margin-left: 2px;
+    color: #333;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+
+.social-icons a {
+    color: #333;
+    margin: 0 8px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+h4 {
+  font-size: 1.8rem; /* make it more visible */
+}
+.clients-marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.clients-track {
+  display: flex;
+  align-items: center;
+  /* animation is set dynamically in JS */
+  will-change: transform;
+}
+
+.clients-group {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.client-logo {
+  height: 40px;
+  opacity: 0.7;
+  width: auto;
+  min-width: 80px;
+  margin-right: 2rem; /* controls spacing, consistent across clones */
+  flex-shrink: 0;     /* prevent resizing */
+}
+.client-logo:last-child {
+  margin-right: 0;
+}
+
+
+/* optional: reduce title size on small screens */
+.clients-title { font-size: 1.125rem; }
+@media (max-width: 576px) {
+  .clients-title { font-size: 1rem; }
+}
+
+.tech-logo-box {
+    width: 100px;   /* fixed box width */
+    height: 100px;  /* fixed box height */
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.0.5);
+  }
+
+  .tech-logo-box img {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain; /* makes sure logos scale proportionally */
+  }
+
+  .card {
+  height: 100%;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+.card-body a {
+  margin-top: auto; /* pushes the link to the bottom */
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+  height: 300px;        /* adjust to the size you want */
+  object-fit: cover;    /* crops the image but keeps aspect ratio */
+}
+
+
+
