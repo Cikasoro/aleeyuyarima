@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   backdrop-filter: blur(10px); /* correct property for blur */
-  color: rgba(28, 9, 80, 0.70) important!; /* global text color */
+  color: rgba(28, 9, 80, 0.75) important!; /* global text color */
 }
 
 
@@ -222,7 +222,7 @@ h4 {
 
 /* Global site text color (without breaking buttons or text-white areas) */
 :root {
-  --site-text: rgba(28, 9, 80, 0.70);
+  --site-text: rgba(28, 9, 80, 0.75);
 }
 
 /* Base color */
@@ -244,14 +244,6 @@ a:not(.btn),
 a:not(.btn):hover,
 .nav-link:hover {
   color: rgba(28, 9, 80, 0.9) !important;
-}
-
-#homeBtn {
-  color: rgba(28, 9, 80, 0.75) !important; /* custom text color */
-}
-
-#homeBtn svg {
-  fill: currentColor !important; /* makes the arrow inherit text color */
 }
 
 
