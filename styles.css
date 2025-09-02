@@ -197,7 +197,7 @@ h4 {
 }
 
 .home-shadow {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px rgba(28, 9, 80, 0.75);
   transition: box-shadow 0.3s ease-in-out;
   border-radius: 6px; /* optional, to make it softer */
 }
@@ -205,7 +205,7 @@ h4 {
 .custom-paragraph {
   font-size: 16px;
   line-height: 26px;
-  color: rgba(28, 9, 80, 0.70);
+  color: rgba(28, 9, 80, 0.75);
 }
 
 @media (min-width: 768px) {
