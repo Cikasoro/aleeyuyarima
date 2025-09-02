@@ -4,11 +4,12 @@ html, body {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    background-blur: 10px; /* Adjust blur intensity */
-    color: #fff; /* Ensures text is readable */
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px); /* correct property for blur */
+  color: rgba(28, 9, 80, 0.60) important!; /* global text color */
 }
+
 
 
 
@@ -204,7 +205,7 @@ h4 {
 .custom-paragraph {
   font-size: 16px;
   line-height: 26px;
-  color: rgba(28, 9, 80, 0.75);
+  color: rgba(28, 9, 80, 0.60);
 }
 
 @media (min-width: 768px) {
