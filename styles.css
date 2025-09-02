@@ -236,7 +236,7 @@ h1,h2,h3,h4,h5,h6,p,li,small,span,em,strong {
 }
 
 /* Links & nav text (but do NOT touch real buttons) */
-a:not(.btn),
+a,
 .nav-link,
 .navbar-brand {
   color: var(--site-text) !important;
