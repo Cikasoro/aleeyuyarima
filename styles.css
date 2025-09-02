@@ -216,3 +216,37 @@ h4 {
 }
 
 
+/* Global site text color (without breaking buttons or text-white areas) */
+:root {
+  --site-text: rgba(28, 9, 80, 0.60);
+}
+
+/* Base color */
+html, body {
+  color: var(--site-text) !important;
+}
+
+/* Make common text elements inherit */
+h1,h2,h3,h4,h5,h6,p,li,small,span,em,strong {
+  color: inherit !important;
+}
+
+/* Links & nav text (but do NOT touch real buttons) */
+a:not(.btn),
+.nav-link,
+.navbar-brand {
+  color: var(--site-text) !important;
+}
+a:not(.btn):hover,
+.nav-link:hover {
+  color: rgba(28, 9, 80, 0.9) !important;
+}
+
+/* Optional: if you used text-secondary/muted a lot and want them to look like your global color */
+.text-secondary,
+.text-muted,
+.text-body,
+.text-dark {
+  color: var(--site-text) !important;
+}
+/* Do NOT override .text-white so hero-on-dark stays readable */
