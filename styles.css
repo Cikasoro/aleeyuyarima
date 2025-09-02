@@ -246,6 +246,15 @@ a:not(.btn):hover,
   color: rgba(28, 9, 80, 0.9) !important;
 }
 
+#homeBtn {
+  color: rgba(28, 9, 80, 0.75) !important; /* custom text color */
+}
+
+#homeBtn svg {
+  fill: currentColor !important; /* makes the arrow inherit text color */
+}
+
+
 /* Optional: if you used text-secondary/muted a lot and want them to look like your global color */
 .text-secondary,
 .text-muted,
