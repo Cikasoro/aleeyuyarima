@@ -197,7 +197,7 @@ h4 {
 }
 
 .home-shadow {
-  box-shadow: 0 4px 8px rgba(28, 9, 80, 0.75);
+  box-shadow: 0 4px 8px rgba(28, 9, 80, 0.3);
   transition: box-shadow 0.3s ease-in-out;
   border-radius: 6px; /* optional, to make it softer */
 }
