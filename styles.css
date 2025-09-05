@@ -91,6 +91,17 @@ footer {
     color: #555;
 }
 
+.project-item {
+  margin-bottom: 16px; /* fallback spacing */
+}
+.project-item img {
+  display: block;
+  width: 100%;
+  border-radius: 12px; /* softer edges */
+  object-fit: cover;   /* keeps image looking neat */
+}
+
+
 
 
 .cursor {
@@ -172,29 +183,7 @@ h4 {
     object-fit: contain; /* makes sure logos scale proportionally */
   }
 
-  .card {
-  height: 100%;
-}
-.card-body {
-  display: flex;
-  flex-direction: column;
-}
-.card-body a {
-  margin-top: auto; /* pushes the link to the bottom */
-}
-
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-}
-
-.card-img-top {
-  height: 300px;        /* adjust to the size you want */
-  object-fit: cover;    /* crops the image but keeps aspect ratio */
-}
+  
 
 .home-shadow {
   box-shadow: 0 4px 8px rgba(28, 9, 80, 0.1);
