@@ -91,38 +91,6 @@ footer {
     color: #555;
 }
 
-#projectsGrid {
-    max-width: 1200px;
-  }
-
-  .project-item {
-    width: 31%;  /* ~3 columns on desktop */
-    margin-bottom: 16px;
-    display: inline-block; /* required for Masonry */
-    vertical-align: top;
-  }
-
-  @media (max-width: 768px) {
-    .project-item {
-      width: 48%; /* 2 columns on tablet */
-    }
-  }
-
-  @media (max-width: 576px) {
-    .project-item {
-      width: 48%; /* 2 columns on mobile */
-    }
-  }
-
-  .project-item img {
-    width: 100%;
-    display: block;
-    border-radius: 12px;
-    object-fit: cover;
-  }
-
-
-
 
 .cursor {
     display: inline-block;
