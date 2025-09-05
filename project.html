@@ -42,31 +42,25 @@
                             </h4>
                         </div>
                     </div>
-                    <div id="projectsWrapper">
-                        <div id="projectsGrid">
-                            <div class="project-item">
-                                <img src="project-images/naubcover.png" alt="Project 1" class="img-fluid">
-                            </div>  
-                            <div class="project-item">
-                                <img src="project-images/hydarteacover.png" alt="Project 1" class="img-fluid">
+                    <div class="container py-5">
+                        <div class="row row-cols-1 row-cols-sm-2 g-4">
+                            <!-- Project card/item -->
+                            <div class="col">
+                            <img src="project-images/naubcover.png" alt="Project 1" class="img-fluid rounded shadow-sm">
                             </div>
-                            <div class="project-item">
-                                <img src="project-images/naubcover.png" alt="Project 1" class="img-fluid">
-                            </div> <div class="project-item">
-                                <img src="project-images/hydarteacover.png" alt="Project 1" class="img-fluid">
-                            </div>  
+                            <div class="col">
+                            <img src="project-images/hydarteacover.png" alt="Project 2" class="img-fluid rounded shadow-sm">
+                            </div>
+                            <div class="col">
+                            <img src="project-images/naubcover.png" alt="Project 3" class="img-fluid rounded shadow-sm">
+                            </div>
+                            <div class="col">
+                            <img src="project-images/naubcover.png" alt="Project 4" class="img-fluid rounded shadow-sm">
+                            </div>
+                            <!-- keep adding more -->
                         </div>
-                        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-                        <script>
-                            var grid = document.querySelector('#projectsGrid');
-                            var msnry = new Masonry(grid, {
-                                itemSelector: '.project-item',
-                                columnWidth: '.project-item',
-                                percentPosition: true,
-                                gutter: 16
-                            });
-                        </script> 
                     </div>
+
                                       
                 </div>
         </main>
