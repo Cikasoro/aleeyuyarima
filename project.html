@@ -58,15 +58,16 @@
                                 <img src="project-images/hydarteacover.png" alt="Project 1" class="img-fluid">
                             </div>  
                         </div>
+                        <script>
+                            var grid = document.querySelector('#projectsGrid');
+                            var msnry = new Masonry(grid, {
+                                itemSelector: '.project-item',
+                                percentPosition: true,
+                                gutter: 16
+                            });
+                        </script> 
                     </div>
-                    <script>
-                        var grid = document.querySelector('#projectsGrid');
-                        var msnry = new Masonry(grid, {
-                            itemSelector: '.project-item',
-                            percentPosition: true,
-                            gutter: 16
-                        });
-                    </script>                   
+                                      
                 </div>
         </main>
         <footer class="site-footer text-center py-3">
