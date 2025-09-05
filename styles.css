@@ -110,7 +110,7 @@ footer {
 
   @media (max-width: 576px) {
     .project-item {
-      width: 100%; /* 1 column on mobile */
+      width: 48%; /* 2 columns on mobile */
     }
   }
 
