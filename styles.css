@@ -211,7 +211,7 @@ html, body {
 }
 
 /* Make common text elements inherit */
-h1,h2,h3,h5,h6,p,li,small,span,em,strong {
+h1,h2,h3,h5,h6,li,small,span,em,strong {
   color: inherit !important;
 }
 
