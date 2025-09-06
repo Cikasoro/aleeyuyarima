@@ -183,7 +183,6 @@ h4 {
 .custom-paragraph {
   font-size: 16px;
   line-height: 28px;
-  color: rgba(28, 9, 80, 0.75);
 }
 
 @media (min-width: 768px) {
