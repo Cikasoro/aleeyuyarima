@@ -84,5 +84,15 @@
             <a href="https://twitter.com/aliyu-yarima" target="_blank" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
         </div>
     </footer>
+    <script>
+                    window.addEventListener("scroll", function () {
+                const homeBtn = document.querySelector("#homeBtn"); 
+                if (window.scrollY > 50) {
+                homeBtn.classList.add("home-shadow");
+                } else {
+                homeBtn.classList.remove("home-shadow");
+                }
+            });
+    </script>
     </body>
 </html>
