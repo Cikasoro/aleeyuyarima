@@ -208,7 +208,7 @@ h4 {
 @media (min-width: 768px) {
   .space2 {
     height: 0;
-    width: 64px;
+    width: 64px;  
     display: inline-block;
   }
 }
