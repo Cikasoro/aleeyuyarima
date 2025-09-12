@@ -38,7 +38,7 @@ footer {
 }
 
 .custom-navbar {
-    background-color: ; /* Pure white */
+    background-color: #fff; /* Pure white */
     padding: 1rem 0;
     border-bottom: 1px solid #ddd; /* Subtle line instead of shadow */
 }
