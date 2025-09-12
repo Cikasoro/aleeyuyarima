@@ -196,7 +196,7 @@ h4 {
 }
 @media (min-width: 768px) {
   .space {
-    height: 0;
+    height: 96px;
     width: 96px;
     display: inline-block;
   }
@@ -207,7 +207,7 @@ h4 {
 }
 @media (min-width: 768px) {
   .space2 {
-    height: 0;
+    height: 64px;
     width: 64px;  
     display: inline-block;
   }
@@ -218,7 +218,7 @@ h4 {
 }
 @media (min-width: 768px) {
   .space3 {
-    height: 0;
+    height: 48px;
     width: 48px;
     display: inline-block;
   }
