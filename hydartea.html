@@ -119,9 +119,11 @@
                             </p>
                             <div class="row justify-content-center"><img src="project-images/hydartea-images/poster 1.png" alt="Project 1" class="img-fluid w-100 "></div>
                         </div>
-                        <button id="backToTop" title="Back to top">
-                            <i class="bi bi-arrow-up"></i>
-                        </button> 
+                        <div class="d-flex justify-content-end fixed-bottom p-3">
+                            <button id="backToTop" title="Back to top">
+                                <i class="bi bi-arrow-up"></i>
+                            </button>
+                        </div>
                     
                         
                     </div>                   
@@ -149,11 +151,13 @@
             const btn = document.getElementById("backToTop");
             window.addEventListener("scroll", function() {
                 if (window.scrollY > 200) {
+                btn.classList.remove("d-none");
                 btn.style.display = "block";
                 btn.style.position = "sticky";
                 btn.style.zIndex = "1030";
                 } else {
                 btn.style.display = "none";
+                btn.classList.add("d-none");
                 }
             });
             btn.addEventListener("click", function() {
