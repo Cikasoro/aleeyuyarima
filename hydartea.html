@@ -127,6 +127,11 @@
             <div class="vspace"></div>
             <div class="vspace"></div>
             <div class="vspace"></div>
+            // ...existing code...
+            <button id="backToTop" title="Back to top">
+            <i class="bi bi-arrow-up"></i>
+            </button>
+<!-- Place this just before </body> -->
 
         </main>
         <footer class="site-footer text-center py-3">
@@ -138,21 +143,21 @@
         </div>
     </footer>
     
+        // ...existing code...
         <script>
-            let lastScrollTop = 0;
-            const navbar = document.getElementById('mainNavbar');
-
-            window.addEventListener('scroll', function() {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                if (scrollTop > lastScrollTop) {
-                    // Scrolling down
-                    navbar.style.top = '-80px'; // Adjust based on navbar height
-                } else {
-                    // Scrolling up
-                    navbar.style.top = '0';
-                }
-                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-            });
+        document.addEventListener("DOMContentLoaded", function() {
+        const btn = document.getElementById("backToTop");
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 200) {
+            btn.style.display = "block";
+            } else {
+            btn.style.display = "none";
+            }
+        });
+        btn.addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+        });
         </script>
     </body>
 </html>
