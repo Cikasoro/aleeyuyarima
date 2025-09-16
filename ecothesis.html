@@ -10,7 +10,7 @@
     </head>
     <body>
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg custom-navbar" style="background-color: #fff;">
+        <nav class="navbar navbar-expand-lg custom-navbar"  id="mainNavbar" style="background-color: #fff; transition: top 0.3s; ">
             <div class="container">
                 <a class="navbar-brand fs-6 fs-md-6 fw-bold" href="#" style="color: #333;">Aliyu Yarima</a>
                 <div class="ms-auto d-flex">
@@ -225,5 +225,21 @@
             <a href="https://twitter.com/@aleeyuyarima" target="_blank" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
         </div>
     </footer>
+    <script>
+            let lastScrollTop = 0;
+            const navbar = document.getElementById('mainNavbar');
+
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling down
+                    navbar.style.top = '-80px'; // Adjust based on navbar height
+                } else {
+                    // Scrolling up
+                    navbar.style.top = '0';
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+            });
+        </script>
     </body>
 </html>
