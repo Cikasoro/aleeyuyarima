@@ -265,7 +265,7 @@ h4 {
   display: none;
   position: fixed;
   bottom: 32px;
-  right: 32px;
+  left: 32px;
   z-index: 1050;
   background: #007bff;
   color: #fff;
