@@ -119,12 +119,13 @@
                             </p>
                             <div class="row justify-content-center"><img src="project-images/hydartea-images/poster 1.png" alt="Project 1" class="img-fluid w-100 "></div>
                         </div>
-                        <div class="d-flex justify-content-end">
-                            <button id="backToTop" title="Back to top">
-                                <i class="bi bi-arrow-up"></i>
-                            </button>
-                        </div>
-                    
+                        <button id="backToTop"
+                                class="btn btn-dark position-fixed bottom-0 end-0 m-3 d-none fade"
+                                title="Back to top"
+                                aria-label="Back to top">
+                            <i class="bi bi-arrow-up"></i>
+                        </button>
+                                            
                         
                     </div>                   
                 </div>
@@ -147,21 +148,58 @@
     
     
         <script>
-            document.addEventListener("DOMContentLoaded", function() {
-            const btn = document.getElementById("backToTop");
-            window.addEventListener("scroll", function() {
-                if (window.scrollY > 200) {
-                btn.classList.remove("d-none");
-                btn.style.display = "block";
-                btn.style.position = "sticky";
-                btn.style.zIndex = "1030";
-                } else {
-                btn.style.display = "none";
-                btn.classList.add("d-none");
+            document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.getElementById('backToTop');
+            if (!btn) return;
+            const SHOW_AFTER = 200; // px scrolled before showing
+
+            // Show / hide with a CSS fade (Bootstrap's fade + show)
+            function showButton() {
+                if (btn.classList.contains('d-none')) {
+                // Remove d-none then trigger show so fade works
+                btn.classList.remove('d-none');
+                // next frame -> add .show to trigger CSS transition
+                requestAnimationFrame(() => btn.classList.add('show'));
                 }
-            });
-            btn.addEventListener("click", function() {
-                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+
+            function hideButton() {
+                if (!btn.classList.contains('d-none')) {
+                // remove show to start fade-out, then add d-none after transition
+                btn.classList.remove('show');
+                const onTransitionEnd = () => {
+                    btn.classList.add('d-none');
+                    btn.removeEventListener('transitionend', onTransitionEnd);
+                };
+                // fallback: if no transitionend fires, still add d-none after 200ms
+                btn.addEventListener('transitionend', onTransitionEnd, { once: true });
+                setTimeout(() => {
+                    if (!btn.classList.contains('d-none')) btn.classList.add('d-none');
+                }, 250);
+                }
+            }
+
+            // Throttle scroll handling via requestAnimationFrame
+            let ticking = false;
+            function onScroll() {
+                if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    if (window.scrollY > SHOW_AFTER) showButton();
+                    else hideButton();
+                    ticking = false;
+                });
+                ticking = true;
+                }
+            }
+
+            // initial check (in case page loads scrolled)
+            if (window.scrollY > SHOW_AFTER) showButton();
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+
+            // Smooth scroll to top on click
+            btn.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
             });
         </script>
