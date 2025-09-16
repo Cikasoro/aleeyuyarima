@@ -70,16 +70,16 @@
                                 </a>
                             </div>
                             <div class="col">
-                            <img src="project-images/nycover.png" alt="Project 4" class="img-fluid rounded shadow-sm">
+                            <img src="project-images/nycover.png" alt="Project 4" class="img-fluid rounded shadow-sm" onclick="bootstrap.Toast.getOrCreateInstance(document.getElementById('comingSoonToast')).show()">
                             </div>
                             <div class="col">
-                            <img src="project-images/iliyacover.png" alt="Project 4" class="img-fluid rounded shadow-sm">
+                            <img src="project-images/iliyacover.png" alt="Project 4" class="img-fluid rounded shadow-sm" onclick="bootstrap.Toast.getOrCreateInstance(document.getElementById('comingSoonToast')).show()">
                             </div>
                             <div class="col">
-                            <img src="project-images/atbuberriescover.png" alt="Project 4" class="img-fluid rounded shadow-sm">
+                            <img src="project-images/atbuberriescover.png" alt="Project 4" class="img-fluid rounded shadow-sm" onclick="bootstrap.Toast.getOrCreateInstance(document.getElementById('comingSoonToast')).show()">
                             </div>
                             <div class="col">
-                            <img src="project-images/nimc.png" alt="Project 4" class="img-fluid rounded shadow-sm">
+                            <img src="project-images/nimc.png" alt="Project 4" class="img-fluid rounded shadow-sm" onclick="bootstrap.Toast.getOrCreateInstance(document.getElementById('comingSoonToast')).show()">
                             </div>
 
                             <!-- keep adding more -->
@@ -127,6 +127,17 @@
                                             <a href="#" class="btn btn-primary disabled" aria-disabled="true">Coming Soon</a>
 
                                         </div>
+                                        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                            <div id="comingSoonToast" class="toast align-items-center text-bg-dark border-0" role="alert">
+                                                <div class="d-flex">
+                                                <div class="toast-body">
+                                                    🚧 This project is still in progress — details coming soon.
+                                                </div>
+                                                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
