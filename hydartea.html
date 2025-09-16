@@ -131,33 +131,33 @@
             <button id="backToTop" title="Back to top">
             <i class="bi bi-arrow-up"></i>
             </button>
-<!-- Place this just before </body> -->
+
 
         </main>
         <footer class="site-footer text-center py-3">
-        <p>&copy; 2025 Aliyu Yarima. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="https://linkedin.com/in/aliyu-yarima" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a href="https://github.com/aliyu-yarima" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
-            <a href="https://twitter.com/aliyu-yarima" target="_blank" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-        </div>
-    </footer>
+            <p>&copy; 2025 Aliyu Yarima. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/aliyu-yarima" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/aliyu-yarima" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                <a href="https://twitter.com/aliyu-yarima" target="_blank" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+            </div>
+        </footer>
     
-        // ...existing code...
+    
         <script>
-        document.addEventListener("DOMContentLoaded", function() {
-        const btn = document.getElementById("backToTop");
-        window.addEventListener("scroll", function() {
-            if (window.scrollY > 200) {
-            btn.style.display = "fixed";
-            } else {
-            btn.style.display = "none";
-            }
-        });
-        btn.addEventListener("click", function() {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-        });
+            document.addEventListener("DOMContentLoaded", function() {
+            const btn = document.getElementById("backToTop");
+            window.addEventListener("scroll", function() {
+                if (window.scrollY > 200) {
+                btn.style.display = "sticky";
+                } else {
+                btn.style.display = "none";
+                }
+            });
+            btn.addEventListener("click", function() {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+            });
         </script>
     </body>
 </html>
