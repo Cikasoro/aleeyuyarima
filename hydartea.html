@@ -132,11 +132,8 @@
 
 
         </main>
-        <button id="backToTop"
-        class="btn btn-dark position-fixed bottom-0 end-0 mb-5 me-3 d-none fade"
-        title="Back to top" aria-label="Back to top">
-        <i class="bi bi-arrow-up"></i>
-        </button>
+        
+        
 
         <footer class="site-footer text-center py-3">
             <p>&copy; 2025 Aliyu Yarima. All rights reserved.</p>
@@ -148,61 +145,7 @@
         </footer>
     
     
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-            const btn = document.getElementById('backToTop');
-            if (!btn) return;
-            const SHOW_AFTER = 200; // px scrolled before showing
-
-            // Show / hide with a CSS fade (Bootstrap's fade + show)
-            function showButton() {
-                if (btn.classList.contains('d-none')) {
-                // Remove d-none then trigger show so fade works
-                btn.classList.remove('d-none');
-                // next frame -> add .show to trigger CSS transition
-                requestAnimationFrame(() => btn.classList.add('show'));
-                }
-            }
-
-            function hideButton() {
-                if (!btn.classList.contains('d-none')) {
-                // remove show to start fade-out, then add d-none after transition
-                btn.classList.remove('show');
-                const onTransitionEnd = () => {
-                    btn.classList.add('d-none');
-                    btn.removeEventListener('transitionend', onTransitionEnd);
-                };
-                // fallback: if no transitionend fires, still add d-none after 200ms
-                btn.addEventListener('transitionend', onTransitionEnd, { once: true });
-                setTimeout(() => {
-                    if (!btn.classList.contains('d-none')) btn.classList.add('d-none');
-                }, 250);
-                }
-            }
-
-            // Throttle scroll handling via requestAnimationFrame
-            let ticking = false;
-            function onScroll() {
-                if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    if (window.scrollY > SHOW_AFTER) showButton();
-                    else hideButton();
-                    ticking = false;
-                });
-                ticking = true;
-                }
-            }
-
-            // initial check (in case page loads scrolled)
-            if (window.scrollY > SHOW_AFTER) showButton();
-
-            window.addEventListener('scroll', onScroll, { passive: true });
-
-            // Smooth scroll to top on click
-            btn.addEventListener('click', function () {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-            });
-        </script>
+        
+        
     </body>
 </html>
