@@ -148,7 +148,9 @@
             const btn = document.getElementById("backToTop");
             window.addEventListener("scroll", function() {
                 if (window.scrollY > 200) {
-                btn.style.display = "sticky";
+                btn.style.display = "block";
+                btn.style.position = "sticky";
+                btn.style.zIndex = "1030";
                 } else {
                 btn.style.display = "none";
                 }
